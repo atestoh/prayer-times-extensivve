@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Prayer Times</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <!-- Removed: <link rel="apple-touch-icon" href="icons/icon-192x192.png"> -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#2196F3">
+</head>
+<body>
+    <div class="container">
+        <h1>Prayer Times</h1>
+        <p class="location-display">Loading location...</p>
+        <p class="date-display"></p>
+
+        <div class="prayer-times">
+            <div class="prayer-item">
+                <span class="prayer-name">Fajr</span>
+                <div class="time-group">
+                    <span class="prayer-time" id="fajr-time">--:--</span>
+                    <span class="prayer-end-time" id="fajr-permissible-end"></span>
+                    <span class="prayer-preferred-time" id="fajr-preferred-end"></span>
+                </div>
+            </div>
+            <div class="prayer-item">
+                <span class="prayer-name">Sunrise</span>
+                <span class="prayer-time" id="sunrise-time">--:--</span>
+            </div>
+            <div class="prayer-item">
+                <span class="prayer-name">Dhuhr</span>
+                <div class="time-group">
+                    <span class="prayer-time" id="dhuhr-time">--:--</span>
+                    <span class="prayer-end-time" id="dhuhr-permissible-end"></span>
+                    <span class="prayer-preferred-time" id="dhuhr-preferred-end"></span>
+                </div>
+            </div>
+            <div class="prayer-item">
+                <span class="prayer-name">Asr</span>
+                <div class="time-group">
+                    <span class="prayer-time" id="asr-time">--:--</span>
+                    <span class="prayer-end-time" id="asr-permissible-end"></span>
+                    <span class="prayer-preferred-time" id="asr-preferred-end"></span>
+                </div>
+            </div>
+            <div class="prayer-item">
+                <span class="prayer-name">Maghrib</span>
+                <div class="time-group">
+                    <span class="prayer-time" id="maghrib-time">--:--</span>
+                    <span class="prayer-end-time" id="maghrib-permissible-end"></span>
+                    <span class="prayer-preferred-time" id="maghrib-preferred-end"></span>
+                </div>
+            </div>
+            <div class="prayer-item">
+                <span class="prayer-name">Isha</span>
+                <div class="time-group">
+                    <span class="prayer-time" id="isha-time">--:--</span>
+                    <span class="prayer-end-time" id="isha-permissible-end"></span>
+                    <span class="prayer-preferred-time" id="isha-preferred-end"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW SECTION for Disliked/Forbidden Times -->
+        <div class="disliked-times-section">
+            <h2>Disliked Prayer Times</h2>
+            <p class="disliked-intro">It is generally disliked or forbidden to pray voluntary (Nafl) prayers during these times. Obligatory (Fard) prayers may be permissible but disliked without a valid reason.</p>
+            <div class="disliked-item">
+                <span class="disliked-name">After Fajr (Sunrise to Ishraq)</span>
+                <span class="disliked-time" id="disliked-fajr-range">--:-- - --:--</span>
+            </div>
+            <div class="disliked-item">
+                <span class="disliked-name">At Zenith (Zawaal)</span>
+                <span class="disliked-time" id="disliked-zawaal-range">--:-- - --:--</span>
+            </div>
+            <div class="disliked-item">
+                <span class="disliked-name">Before Maghrib (Asr Karaha)</span>
+                <span class="disliked-time" id="disliked-maghrib-range">--:-- - --:--</span>
+            </div>
+        </div>
+
+        <button id="refresh-button">Refresh Times</button>
+        <p class="last-updated"></p>
+    </div>
+
+    <!-- adhan-js library - MUST BE LOADED BEFORE script.js -->
+    <script src="https://cdn.jsdelivr.net/npm/adhan@5.0.0/dist/adhan.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

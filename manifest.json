@@ -1,0 +1,10 @@
+{
+    "name": "My Prayer Times",
+    "short_name": "Prayer Times",
+    "description": "Personalized Muslim prayer times app.",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#e0f2f7",
+    "theme_color": "#2196F3",
+    "icons": []
+}
